@@ -15,6 +15,6 @@ class StartView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.cameraView.startCamera()
+//        self.cameraView.startCamera()
     }
 }

@@ -28,6 +28,16 @@
                                 <rect key="frame" x="15" y="77" width="345" height="490"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g05-81-cFT" customClass="MessageLabel" customModule="Picturesque" customModuleProvider="target">
+                                <rect key="frame" x="25" y="523" width="325" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="SeB-xu-I5b"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="choose a picture"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QL6-Wy-kuW" customClass="BottomCardView" customModule="Picturesque" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="557" width="375" height="110"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,12 +55,15 @@
                         <constraints>
                             <constraint firstItem="QL6-Wy-kuW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1LX-p3-nQz"/>
                             <constraint firstItem="QL6-Wy-kuW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3lQ-J7-NWp"/>
+                            <constraint firstItem="g05-81-cFT" firstAttribute="leading" secondItem="9so-uq-1K3" secondAttribute="leading" constant="10" id="8Td-OP-rr3"/>
                             <constraint firstItem="1qn-h0-RBj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="8Zl-B3-fhr"/>
+                            <constraint firstItem="QL6-Wy-kuW" firstAttribute="top" secondItem="g05-81-cFT" secondAttribute="bottom" constant="10" id="CZY-Mn-C6l"/>
                             <constraint firstItem="QL6-Wy-kuW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MXg-dw-LXh"/>
                             <constraint firstItem="9so-uq-1K3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="VwZ-GX-Mmd"/>
                             <constraint firstItem="QL6-Wy-kuW" firstAttribute="top" secondItem="9so-uq-1K3" secondAttribute="bottom" constant="-10" id="YEt-Th-lD8"/>
                             <constraint firstItem="1qn-h0-RBj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="hCK-pu-G24"/>
                             <constraint firstItem="9so-uq-1K3" firstAttribute="top" secondItem="1qn-h0-RBj" secondAttribute="bottom" id="sYo-UL-i8J"/>
+                            <constraint firstItem="9so-uq-1K3" firstAttribute="trailing" secondItem="g05-81-cFT" secondAttribute="trailing" constant="10" id="tcS-ta-OsN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9so-uq-1K3" secondAttribute="trailing" constant="15" id="vKc-FX-HQI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

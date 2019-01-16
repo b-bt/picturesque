@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 
-@IBDesignable class ARCameraView: UIView {
+@IBDesignable
+class ARCameraView: UIView {
 
     // MARK: Camera Properties and Functions
     private var captureCameraSession = AVCaptureSession()
@@ -40,6 +41,7 @@ import AVFoundation
     }
     
     func commonInit() {
+        self.backgroundColor = UIColor.lightGray
         self.roundCorners(corners: [.allCorners], radius: 5.0)
     }
 }
