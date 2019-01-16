@@ -17,6 +17,9 @@
 		6735AD4D21EFC3CB00D0856A /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6735AD4C21EFC3CA00D0856A /* PictureCell.xib */; };
 		67401CF221EFCB1600990DBE /* NewPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67401CF121EFCB1600990DBE /* NewPictureCell.xib */; };
 		67401CF421EFCC3B00990DBE /* NewPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67401CF321EFCC3B00990DBE /* NewPictureCell.swift */; };
+		67401CF621EFD0B700990DBE /* PicturesCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67401CF521EFD0B700990DBE /* PicturesCollectionDelegate.swift */; };
+		67401CF821EFD37300990DBE /* CameraViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67401CF721EFD37300990DBE /* CameraViewProtocol.swift */; };
+		67401CFA21EFD3E500990DBE /* MockCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67401CF921EFD3E500990DBE /* MockCameraView.swift */; };
 		675FB24121EF71A80034E438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB24021EF71A80034E438 /* AppDelegate.swift */; };
 		675FB24621EF71A80034E438 /* StartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24421EF71A80034E438 /* StartView.storyboard */; };
 		675FB24B21EF71AA0034E438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24A21EF71AA0034E438 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		6735AD4C21EFC3CA00D0856A /* PictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		67401CF121EFCB1600990DBE /* NewPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPictureCell.xib; sourceTree = "<group>"; };
 		67401CF321EFCC3B00990DBE /* NewPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPictureCell.swift; sourceTree = "<group>"; };
+		67401CF521EFD0B700990DBE /* PicturesCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCollectionDelegate.swift; sourceTree = "<group>"; };
+		67401CF721EFD37300990DBE /* CameraViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewProtocol.swift; sourceTree = "<group>"; };
+		67401CF921EFD3E500990DBE /* MockCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCameraView.swift; sourceTree = "<group>"; };
 		675FB23D21EF71A80034E438 /* Picturesque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picturesque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		675FB24021EF71A80034E438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		675FB24521EF71A80034E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StartView.storyboard; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 		6735AD3C21EF87D500D0856A /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
+				67401CF721EFD37300990DBE /* CameraViewProtocol.swift */,
+				67401CF921EFD3E500990DBE /* MockCameraView.swift */,
 				6735AD3D21EF880900D0856A /* ARCameraView.swift */,
 			);
 			path = CameraView;
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6735AD4621EFC0F100D0856A /* PicturesCollectionView.swift */,
+				67401CF521EFD0B700990DBE /* PicturesCollectionDelegate.swift */,
 				67401CF021EFCAA400990DBE /* NewPictureCell */,
 				6735AD4B21EFC37800D0856A /* PictureCell */,
 			);
@@ -299,8 +308,11 @@
 				675FB26821EF7ED30034E438 /* UIView+Shadow.swift in Sources */,
 				675FB26021EF768C0034E438 /* UIView+RoundCorners.swift in Sources */,
 				6735AD4721EFC0F100D0856A /* PicturesCollectionView.swift in Sources */,
+				67401CFA21EFD3E500990DBE /* MockCameraView.swift in Sources */,
 				6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */,
 				6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */,
+				67401CF621EFD0B700990DBE /* PicturesCollectionDelegate.swift in Sources */,
+				67401CF821EFD37300990DBE /* CameraViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

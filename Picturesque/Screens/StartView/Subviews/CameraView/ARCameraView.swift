@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 @IBDesignable
-class ARCameraView: UIView {
+class ARCameraView: UIView, CameraViewProtocol {
 
     // MARK: Camera Properties and Functions
     private var captureCameraSession = AVCaptureSession()
@@ -19,15 +19,6 @@ class ARCameraView: UIView {
     private let videoDataOutputQueue = DispatchQueue(label: "ARVideoDataOutput",
                                                      qos: .userInitiated,
                                                      attributes: [], autoreleaseFrequency: .workItem)
-
-    func startCamera() {
-        self.setupAVCapture(session: captureCameraSession,
-                            cameraLayer: cameraLayer,
-                            videoDataOutput: videoDataOutput,
-                            videoDataOutputQueue: videoDataOutputQueue,
-                            outputDelegate: self)
-        self.startCapturing(self.captureCameraSession)
-    }
     
     // Initializer:
     override init(frame: CGRect) {
@@ -43,6 +34,15 @@ class ARCameraView: UIView {
     func commonInit() {
         self.backgroundColor = UIColor.lightGray
         self.roundCorners(corners: [.allCorners], radius: 5.0)
+    }
+    
+    func startCamera() {
+        self.setupAVCapture(session: captureCameraSession,
+                            cameraLayer: cameraLayer,
+                            videoDataOutput: videoDataOutput,
+                            videoDataOutputQueue: videoDataOutputQueue,
+                            outputDelegate: self)
+        self.startCapturing(self.captureCameraSession)
     }
 }
 

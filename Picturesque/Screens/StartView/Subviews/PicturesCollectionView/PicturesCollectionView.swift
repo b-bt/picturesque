@@ -44,7 +44,7 @@ extension PicturesCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if (indexPath.item == 0) { // Initial cell should be a new 
+        if (indexPath.item == 0) { // Initial cell should be a new
             let cell = self.dequeueReusableCell(withReuseIdentifier: self.newPictureCellIdentifier, for: indexPath)
             return cell
         }
@@ -52,6 +52,4 @@ extension PicturesCollectionView: UICollectionViewDataSource {
         let cell = self.dequeueReusableCell(withReuseIdentifier: self.pictureCellIdentifier, for: indexPath) as! PictureCell
         return cell
     }
-    
-    
 }

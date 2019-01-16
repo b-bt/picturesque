@@ -10,11 +10,11 @@ import UIKit
 
 class StartView: UIViewController {
 
-    @IBOutlet weak var cameraView: ARCameraView!
+    @IBOutlet weak var cameraView: MockCameraView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.cameraView.startCamera()
+        self.cameraView.startCamera()
     }
 }
