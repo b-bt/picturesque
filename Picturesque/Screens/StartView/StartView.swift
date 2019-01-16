@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartView.swift
 //  Picturesque
 //
 //  Created by Bruno Barbosa on 16/01/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartView: UIViewController {
 
+    @IBOutlet weak var cameraView: ARCameraView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.cameraView.startCamera()
     }
-
-
 }
-
