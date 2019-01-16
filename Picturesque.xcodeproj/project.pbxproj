@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3521EF858F00D0856A /* UIView+Camera.swift */; };
+		6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3921EF86BA00D0856A /* StartView.swift */; };
+		6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3D21EF880900D0856A /* ARCameraView.swift */; };
 		675FB24121EF71A80034E438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB24021EF71A80034E438 /* AppDelegate.swift */; };
-		675FB24321EF71A80034E438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB24221EF71A80034E438 /* ViewController.swift */; };
-		675FB24621EF71A80034E438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24421EF71A80034E438 /* Main.storyboard */; };
-		675FB24921EF71A80034E438 /* Picturesque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 675FB24721EF71A80034E438 /* Picturesque.xcdatamodeld */; };
+		675FB24621EF71A80034E438 /* StartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24421EF71A80034E438 /* StartView.storyboard */; };
 		675FB24B21EF71AA0034E438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24A21EF71AA0034E438 /* Assets.xcassets */; };
 		675FB24E21EF71AA0034E438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24C21EF71AA0034E438 /* LaunchScreen.storyboard */; };
+		675FB25721EF72DD0034E438 /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */; };
+		675FB25921EF73AC0034E438 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */; };
+		675FB25B21EF73B80034E438 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */; };
+		675FB25D21EF752F0034E438 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB25C21EF752F0034E438 /* BottomCardView.swift */; };
+		675FB26021EF768C0034E438 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB25F21EF768C0034E438 /* UIView+RoundCorners.swift */; };
+		675FB26321EF781F0034E438 /* UIView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB26221EF781F0034E438 /* UIView+Xib.swift */; };
+		675FB26821EF7ED30034E438 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB26721EF7ED30034E438 /* UIView+Shadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6735AD3521EF858F00D0856A /* UIView+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Camera.swift"; sourceTree = "<group>"; };
+		6735AD3921EF86BA00D0856A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		6735AD3D21EF880900D0856A /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
 		675FB23D21EF71A80034E438 /* Picturesque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picturesque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		675FB24021EF71A80034E438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		675FB24221EF71A80034E438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		675FB24521EF71A80034E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		675FB24821EF71A80034E438 /* Picturesque.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Picturesque.xcdatamodel; sourceTree = "<group>"; };
+		675FB24521EF71A80034E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StartView.storyboard; sourceTree = "<group>"; };
 		675FB24A21EF71AA0034E438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		675FB24D21EF71AA0034E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675FB24F21EF71AA0034E438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
+		675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		675FB25C21EF752F0034E438 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
+		675FB25F21EF768C0034E438 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		675FB26221EF781F0034E438 /* UIView+Xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Xib.swift"; sourceTree = "<group>"; };
+		675FB26721EF7ED30034E438 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6735AD3721EF867700D0856A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6735AD3821EF868800D0856A /* StartView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6735AD3821EF868800D0856A /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				675FB24421EF71A80034E438 /* StartView.storyboard */,
+				6735AD3921EF86BA00D0856A /* StartView.swift */,
+				6735AD3B21EF878100D0856A /* Subviews */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		6735AD3B21EF878100D0856A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				6735AD3C21EF87D500D0856A /* CameraView */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		6735AD3C21EF87D500D0856A /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				6735AD3D21EF880900D0856A /* ARCameraView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		675FB23421EF71A80034E438 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +106,61 @@
 		675FB23F21EF71A80034E438 /* Picturesque */ = {
 			isa = PBXGroup;
 			children = (
-				675FB24021EF71A80034E438 /* AppDelegate.swift */,
-				675FB24221EF71A80034E438 /* ViewController.swift */,
-				675FB24421EF71A80034E438 /* Main.storyboard */,
-				675FB24A21EF71AA0034E438 /* Assets.xcassets */,
+				675FB26121EF772A0034E438 /* App */,
+				6735AD3721EF867700D0856A /* Screens */,
+				675FB26521EF798E0034E438 /* UIComponents */,
+				675FB25E21EF766F0034E438 /* Extensions */,
+				675FB25521EF72B30034E438 /* Resources */,
 				675FB24C21EF71AA0034E438 /* LaunchScreen.storyboard */,
-				675FB24F21EF71AA0034E438 /* Info.plist */,
-				675FB24721EF71A80034E438 /* Picturesque.xcdatamodeld */,
 			);
 			path = Picturesque;
+			sourceTree = "<group>";
+		};
+		675FB25521EF72B30034E438 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				675FB24A21EF71AA0034E438 /* Assets.xcassets */,
+				675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */,
+				675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */,
+				675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		675FB25E21EF766F0034E438 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				675FB25F21EF768C0034E438 /* UIView+RoundCorners.swift */,
+				675FB26221EF781F0034E438 /* UIView+Xib.swift */,
+				675FB26721EF7ED30034E438 /* UIView+Shadow.swift */,
+				6735AD3521EF858F00D0856A /* UIView+Camera.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		675FB26121EF772A0034E438 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				675FB24F21EF71AA0034E438 /* Info.plist */,
+				675FB24021EF71A80034E438 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		675FB26521EF798E0034E438 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				675FB26621EF79A90034E438 /* BottomCardView */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		675FB26621EF79A90034E438 /* BottomCardView */ = {
+			isa = PBXGroup;
+			children = (
+				675FB25C21EF752F0034E438 /* BottomCardView.swift */,
+			);
+			path = BottomCardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +221,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				675FB25921EF73AC0034E438 /* OpenSans-Regular.ttf in Resources */,
 				675FB24E21EF71AA0034E438 /* LaunchScreen.storyboard in Resources */,
+				675FB25B21EF73B80034E438 /* OpenSans-Bold.ttf in Resources */,
 				675FB24B21EF71AA0034E438 /* Assets.xcassets in Resources */,
-				675FB24621EF71A80034E438 /* Main.storyboard in Resources */,
+				675FB25721EF72DD0034E438 /* AmericanTypewriter.ttc in Resources */,
+				675FB24621EF71A80034E438 /* StartView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +237,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				675FB24321EF71A80034E438 /* ViewController.swift in Sources */,
-				675FB24921EF71A80034E438 /* Picturesque.xcdatamodeld in Sources */,
+				6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */,
+				675FB26321EF781F0034E438 /* UIView+Xib.swift in Sources */,
+				675FB25D21EF752F0034E438 /* BottomCardView.swift in Sources */,
 				675FB24121EF71A80034E438 /* AppDelegate.swift in Sources */,
+				675FB26821EF7ED30034E438 /* UIView+Shadow.swift in Sources */,
+				675FB26021EF768C0034E438 /* UIView+RoundCorners.swift in Sources */,
+				6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */,
+				6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		675FB24421EF71A80034E438 /* Main.storyboard */ = {
+		675FB24421EF71A80034E438 /* StartView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				675FB24521EF71A80034E438 /* Base */,
 			);
-			name = Main.storyboard;
+			name = StartView.storyboard;
 			sourceTree = "<group>";
 		};
 		675FB24C21EF71AA0034E438 /* LaunchScreen.storyboard */ = {
@@ -288,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMU36CU64R;
-				INFOPLIST_FILE = Picturesque/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Picturesque/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMU36CU64R;
-				INFOPLIST_FILE = Picturesque/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Picturesque/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,19 +444,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		675FB24721EF71A80034E438 /* Picturesque.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				675FB24821EF71A80034E438 /* Picturesque.xcdatamodel */,
-			);
-			currentVersion = 675FB24821EF71A80034E438 /* Picturesque.xcdatamodel */;
-			path = Picturesque.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 675FB23521EF71A80034E438 /* Project object */;
 }
