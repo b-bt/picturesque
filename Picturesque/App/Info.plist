@@ -24,7 +24,6 @@
 	<string>Picturesque uses tha camera to help you putting your pictures on the wall</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>AmericanTypewriter.ttc</string>
 		<string>OpenSans-Regular.ttf</string>
 		<string>OpenSans-Bold.ttf</string>
 	</array>

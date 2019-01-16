@@ -14,7 +14,6 @@
 		675FB24621EF71A80034E438 /* StartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24421EF71A80034E438 /* StartView.storyboard */; };
 		675FB24B21EF71AA0034E438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24A21EF71AA0034E438 /* Assets.xcassets */; };
 		675FB24E21EF71AA0034E438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675FB24C21EF71AA0034E438 /* LaunchScreen.storyboard */; };
-		675FB25721EF72DD0034E438 /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */; };
 		675FB25921EF73AC0034E438 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */; };
 		675FB25B21EF73B80034E438 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */; };
 		675FB25D21EF752F0034E438 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675FB25C21EF752F0034E438 /* BottomCardView.swift */; };
@@ -33,7 +32,6 @@
 		675FB24A21EF71AA0034E438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		675FB24D21EF71AA0034E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675FB24F21EF71AA0034E438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
 		675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		675FB25C21EF752F0034E438 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				675FB24A21EF71AA0034E438 /* Assets.xcassets */,
-				675FB25621EF72DA0034E438 /* AmericanTypewriter.ttc */,
 				675FB25821EF73AC0034E438 /* OpenSans-Regular.ttf */,
 				675FB25A21EF73B80034E438 /* OpenSans-Bold.ttf */,
 			);
@@ -225,7 +222,6 @@
 				675FB24E21EF71AA0034E438 /* LaunchScreen.storyboard in Resources */,
 				675FB25B21EF73B80034E438 /* OpenSans-Bold.ttf in Resources */,
 				675FB24B21EF71AA0034E438 /* Assets.xcassets in Resources */,
-				675FB25721EF72DD0034E438 /* AmericanTypewriter.ttc in Resources */,
 				675FB24621EF71A80034E438 /* StartView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
