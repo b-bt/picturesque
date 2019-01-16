@@ -11,6 +11,7 @@ import UIKit
 class PicturesCollectionView: UICollectionView {
 
     private let pictureCellIdentifier = "pictureCell"
+    private let newPictureCellIdentifier = "newPictureCellIdentifier"
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -28,17 +29,26 @@ class PicturesCollectionView: UICollectionView {
     
     func commonInit() {
         self.dataSource = self
+        
+        // Register cells:
         self.register(PictureCell.self, forCellWithReuseIdentifier: self.pictureCellIdentifier)
+        self.register(NewPictureCell.self, forCellWithReuseIdentifier: self.newPictureCellIdentifier)
     }
 
 }
 
 extension PicturesCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 5 + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if (indexPath.item == 0) { // Initial cell should be a new 
+            let cell = self.dequeueReusableCell(withReuseIdentifier: self.newPictureCellIdentifier, for: indexPath)
+            return cell
+        }
+        
         let cell = self.dequeueReusableCell(withReuseIdentifier: self.pictureCellIdentifier, for: indexPath) as! PictureCell
         return cell
     }

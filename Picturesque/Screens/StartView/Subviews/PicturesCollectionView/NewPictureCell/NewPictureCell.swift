@@ -1,5 +1,5 @@
 //
-//  PictureCollectionViewCell.swift
+//  NewPictureCell.swift
 //  Picturesque
 //
 //  Created by Bruno Barbosa on 16/01/19.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class PictureCell: UICollectionViewCell {
+class NewPictureCell: UICollectionViewCell {
     
     fileprivate var cellContentView: UIView!
-    private let cornerRadius: CGFloat = 5.0
-    
-    @IBOutlet weak var imgView: UIImageView!
+    private var cornerRadius: CGFloat = 5.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
