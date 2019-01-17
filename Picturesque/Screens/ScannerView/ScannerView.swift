@@ -29,10 +29,17 @@ class ScannerView: UIViewController {
             return
         }
         self.isScanning = true
+        self.messageLbl.text = "scanning your picture"
         
         LaserView.scan(view: self.view, completion: {
             self.isScanning = false
+            self.messageLbl.text = "ready for next picture"
         })
+        /*
+        place picture in view
+        ready for next picture
+        scanning your picture
+         */
     }
     
 }

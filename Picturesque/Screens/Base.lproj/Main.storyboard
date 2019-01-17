@@ -158,7 +158,7 @@
                                     <constraint firstAttribute="height" constant="24" id="bQe-3n-rzG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="position picture in view"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="place picture in view"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooy-VJ-dpg" customClass="LabelButton" customModule="Picturesque" customModuleProvider="target">

@@ -35,8 +35,8 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="aHL-Wp-Ldx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Rg2-D9-JOr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aHL-Wp-Ldx" secondAttribute="trailing" constant="15" id="Vnv-eF-qZC"/>
-                <constraint firstItem="aHL-Wp-Ldx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="ZpM-pD-lM7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aHL-Wp-Ldx" secondAttribute="trailing" constant="15" id="Vnv-eF-qZC"/>
+                <constraint firstItem="aHL-Wp-Ldx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="ZpM-pD-lM7"/>
                 <constraint firstItem="aHL-Wp-Ldx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-1" id="nqz-to-43M"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
