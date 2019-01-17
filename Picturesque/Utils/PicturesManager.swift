@@ -17,6 +17,7 @@ class PicturesManager {
         [
             UIImage(named: "pic-pink")!,
             UIImage(named: "pic-monster")!,
+            UIImage(named: "pic-steven")!,
             UIImage(named: "pic-titans")!,
             UIImage(named: "pic-gravity")!
         ]
