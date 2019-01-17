@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 @IBDesignable
-class ARCameraView: UIView, CameraViewProtocol {
+class ARCameraView: UIView {
 
     // MARK: Camera Properties and Functions
     private var captureCameraSession = AVCaptureSession()
@@ -35,7 +35,9 @@ class ARCameraView: UIView, CameraViewProtocol {
         self.backgroundColor = UIColor.lightGray
         self.roundCorners(corners: [.allCorners], radius: 5.0)
     }
-    
+}
+
+extension ARCameraView: CameraViewProtocol {
     func startCamera() {
         self.setupAVCapture(session: captureCameraSession,
                             cameraLayer: cameraLayer,
@@ -43,6 +45,14 @@ class ARCameraView: UIView, CameraViewProtocol {
                             videoDataOutputQueue: videoDataOutputQueue,
                             outputDelegate: self)
         self.startCapturing(self.captureCameraSession)
+    }
+    
+    func add(picture: Picture) {
+        let pictureView = PictureView()
+    }
+    
+    func remove(picture: Picture) {
+        
     }
 }
 

@@ -8,16 +8,11 @@
 
 import UIKit
 
-class MockCameraView: UIView, CameraViewProtocol {
+class MockCameraView: UIView {
     
-    func startCamera() {
-        self.roundCorners(corners: .allCorners, radius: 5.0)
-        self.clipsToBounds = true
-        
-       self.addImage()
-    }
+    private var pictureViews: [String:PictureView] = [:]
     
-    private func addImage() {
+    private func addBgImage() {
         guard let wallImage:UIImage = UIImage(named: "wall-image") else {
             return
         }
@@ -35,4 +30,25 @@ class MockCameraView: UIView, CameraViewProtocol {
         self.setNeedsLayout()
     }
 
+}
+
+extension MockCameraView: CameraViewProtocol {
+    func startCamera() {
+        self.roundCorners(corners: .allCorners, radius: 5.0)
+        self.clipsToBounds = true
+        
+        self.addBgImage()
+    }
+    
+    func add(picture: Picture) {
+        let pictureView = PictureView(with: picture)
+        pictureView.center = self.center
+        self.pictureViews[picture.id] = pictureView
+        self.addSubview(pictureView)
+    }
+    
+    func remove(picture: Picture) {
+        guard let pictureView = self.pictureViews[picture.id] else { return }
+        pictureView.removeFromSuperview()
+    }
 }

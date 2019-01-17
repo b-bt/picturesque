@@ -12,6 +12,8 @@
 		67291CEA21EFFC450079DA03 /* CompletionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE921EFFC450079DA03 /* CompletionBlock.swift */; };
 		67291CED21F002F60079DA03 /* PicturesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CEC21F002F60079DA03 /* PicturesManager.swift */; };
 		67291CF021F0037D0079DA03 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CEF21F0037D0079DA03 /* Picture.swift */; };
+		67291CF521F0CDB70079DA03 /* PictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67291CF421F0CDB70079DA03 /* PictureView.xib */; };
+		67291CF721F0D0BF0079DA03 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CF621F0D0BF0079DA03 /* PictureView.swift */; };
 		6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3521EF858F00D0856A /* UIView+Camera.swift */; };
 		6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3921EF86BA00D0856A /* StartView.swift */; };
 		6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3D21EF880900D0856A /* ARCameraView.swift */; };
@@ -45,6 +47,8 @@
 		67291CE921EFFC450079DA03 /* CompletionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionBlock.swift; sourceTree = "<group>"; };
 		67291CEC21F002F60079DA03 /* PicturesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesManager.swift; sourceTree = "<group>"; };
 		67291CEF21F0037D0079DA03 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		67291CF421F0CDB70079DA03 /* PictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureView.xib; sourceTree = "<group>"; };
+		67291CF621F0D0BF0079DA03 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		6735AD3521EF858F00D0856A /* UIView+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Camera.swift"; sourceTree = "<group>"; };
 		6735AD3921EF86BA00D0856A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		6735AD3D21EF880900D0856A /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		67291CF321F0CCD80079DA03 /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+				67291CF621F0D0BF0079DA03 /* PictureView.swift */,
+				67291CF421F0CDB70079DA03 /* PictureView.xib */,
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
 		6735AD3721EF867700D0856A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,7 @@
 				67401CF721EFD37300990DBE /* CameraViewProtocol.swift */,
 				67401CF921EFD3E500990DBE /* MockCameraView.swift */,
 				6735AD3D21EF880900D0856A /* ARCameraView.swift */,
+				67291CF321F0CCD80079DA03 /* PictureView */,
 			);
 			path = CameraView;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6735AD4D21EFC3CB00D0856A /* PictureCell.xib in Resources */,
+				67291CF521F0CDB70079DA03 /* PictureView.xib in Resources */,
 				67401CF221EFCB1600990DBE /* NewPictureCell.xib in Resources */,
 				6735AD4521EFA1ED00D0856A /* MessageLabel.xib in Resources */,
 				675FB25921EF73AC0034E438 /* OpenSans-Regular.ttf in Resources */,
@@ -385,6 +400,7 @@
 				675FB26321EF781F0034E438 /* UIView+Xib.swift in Sources */,
 				675FB25D21EF752F0034E438 /* BottomCardView.swift in Sources */,
 				675FB24121EF71A80034E438 /* AppDelegate.swift in Sources */,
+				67291CF721F0D0BF0079DA03 /* PictureView.swift in Sources */,
 				675FB26821EF7ED30034E438 /* UIView+Shadow.swift in Sources */,
 				675FB26021EF768C0034E438 /* UIView+RoundCorners.swift in Sources */,
 				67401D0321EFDC4400990DBE /* ScannerView.swift in Sources */,

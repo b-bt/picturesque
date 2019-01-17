@@ -10,4 +10,6 @@ import Foundation
 
 protocol CameraViewProtocol {
     func startCamera()
+    func add(picture: Picture)
+    func remove(picture: Picture)
 }

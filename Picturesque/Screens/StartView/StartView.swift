@@ -33,10 +33,10 @@ extension StartView: PicturesCollectionDelegate {
     }
     
     func selected(picture: Picture) {
-        
+        self.cameraView.add(picture: picture)
     }
     
     func deselected(picture: Picture) {
-        
+        self.cameraView.remove(picture: picture)
     }
 }
