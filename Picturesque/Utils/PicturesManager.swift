@@ -20,11 +20,11 @@ class PicturesManager {
     private var currentId: Int = 0
     private var pendingImages: [UIImage] =
         [
-            UIImage(named: "pic-pink")!,
             UIImage(named: "pic-monster")!,
-            UIImage(named: "pic-steven")!,
             UIImage(named: "pic-titans")!,
-            UIImage(named: "pic-gravity")!
+            UIImage(named: "pic-gravity")!,
+            UIImage(named: "pic-pink")!,
+            UIImage(named: "pic-steven")!
         ]
     
     // TODO: Replace this method for one that receives a new picture
