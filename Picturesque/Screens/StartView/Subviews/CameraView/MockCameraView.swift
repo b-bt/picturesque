@@ -58,6 +58,11 @@ class MockCameraView: UIView {
         view.addGestureRecognizer(pinchRecognizer)
     }
     
+    private func addRotationGesture(to view: PictureView) {
+        let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotateView(_:)))
+        view.addGestureRecognizer(rotationGesture)
+    }
+    
     // MARK: Gesture Recognizers Responders:
     @objc private func mainViewTapped(_ sender: UITapGestureRecognizer) {
         self.select(view: nil)
@@ -96,6 +101,13 @@ class MockCameraView: UIView {
         view.scale(by: sender.scale)
         sender.scale = 1.0
     }
+    
+    @objc private func rotateView(_ sender: UIRotationGestureRecognizer) {
+        guard let view = sender.view as? PictureView else { return }
+        
+        view.transform = view.transform.rotated(by: sender.rotation)
+        sender.rotation = 0
+    }
 }
 
 extension MockCameraView: CameraViewProtocol {
@@ -125,6 +137,7 @@ extension MockCameraView: CameraViewProtocol {
         pictureView.addGestureRecognizer(tapGesture)
         self.addPanRecognizer(to: pictureView)
         self.addPinchRegognizer(to: pictureView)
+        self.addRotationGesture(to: pictureView)
         
         self.select(view: pictureView)
     }
