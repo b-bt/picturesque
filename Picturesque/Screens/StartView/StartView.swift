@@ -11,7 +11,18 @@ import UIKit
 class StartView: UIViewController {
 
     @IBOutlet weak var cameraView: MockCameraView!
+    @IBOutlet weak var messageLabel: MessageLabel!
     @IBOutlet weak var picturesCollection: PicturesCollectionView!
+    
+    private var selectedCount: Int = 0 {
+        didSet {
+            if selectedCount <= 0 {
+                self.messageLabel.text = "choose a picture"
+            } else {
+                self.messageLabel.text = "position picture on the wall"
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +45,11 @@ extension StartView: PicturesCollectionDelegate {
     
     func selected(picture: Picture) {
         self.cameraView.add(picture: picture)
+        self.selectedCount += 1
     }
     
     func deselected(picture: Picture) {
         self.cameraView.remove(picture: picture)
+        self.selectedCount -= 1
     }
 }

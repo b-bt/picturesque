@@ -19,13 +19,15 @@ import UIKit
     
     @IBInspectable var text: String? {
         didSet {
-            // create animation
-            let animation: CATransition = CATransition()
-            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-            animation.type = CATransitionType.fade
-//            animation.subtype = CATransitionSubtype.fromTop
-            animation.duration = 0.5
-            self.label.layer.add(animation, forKey: "kCATransitionFade")
+            if (label.text != self.text) {
+                // create animation
+                let animation: CATransition = CATransition()
+                animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                animation.type = CATransitionType.push
+                animation.subtype = CATransitionSubtype.fromRight
+                animation.duration = 0.6
+                self.label.layer.add(animation, forKey: "kCATransitionPush")
+            }
             
             self.label.text = self.text ?? ""
         }

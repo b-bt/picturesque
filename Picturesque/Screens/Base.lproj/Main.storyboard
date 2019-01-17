@@ -121,6 +121,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="9so-uq-1K3" id="aNk-jy-fMP"/>
+                        <outlet property="messageLabel" destination="g05-81-cFT" id="dyH-da-WCE"/>
                         <outlet property="picturesCollection" destination="LUg-3b-aoU" id="scJ-be-tRl"/>
                         <segue destination="ClE-z7-ejd" kind="presentation" identifier="scanPictureSegue" id="uVR-h6-kKp"/>
                     </connections>
