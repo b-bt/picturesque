@@ -13,33 +13,38 @@ class PicturesCollectionView: UICollectionView {
     private let pictureCellIdentifier = "pictureCell"
     private let newPictureCellIdentifier = "newPictureCellIdentifier"
     
+    var picturesDelegate: PicturesCollectionDelegate?
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         self.commonInit()
-        
-        print("INIT frame layout")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
-        
-        print("INIT coder")
     }
     
     func commonInit() {
         self.dataSource = self
+        self.delegate = self
         
         // Register cells:
         self.register(PictureCell.self, forCellWithReuseIdentifier: self.pictureCellIdentifier)
         self.register(NewPictureCell.self, forCellWithReuseIdentifier: self.newPictureCellIdentifier)
     }
+    
+    func reloadPictures() {
+        // TODO: animate picture additions
+        self.reloadData()
+    }
 
 }
 
 extension PicturesCollectionView: UICollectionViewDataSource {
+    // TODO: display message if empty
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 + 1
+        return PicturesManager.picturesCount + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,6 +55,20 @@ extension PicturesCollectionView: UICollectionViewDataSource {
         }
         
         let cell = self.dequeueReusableCell(withReuseIdentifier: self.pictureCellIdentifier, for: indexPath) as! PictureCell
+        if let picture = PicturesManager.picture(at: (indexPath.item-1)) {
+            cell.picture = picture
+        }
         return cell
+    }
+}
+
+extension PicturesCollectionView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            self.picturesDelegate?.scanNewPicture()
+            return
+        }
+        
+        // TODO: select picture and send it to CameraView
     }
 }

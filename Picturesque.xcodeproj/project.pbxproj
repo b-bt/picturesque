@@ -10,6 +10,8 @@
 		67291CE521EFE1D80079DA03 /* PictureScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE421EFE1D80079DA03 /* PictureScanView.swift */; };
 		67291CE821EFFAFA0079DA03 /* LaserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE721EFFAFA0079DA03 /* LaserView.swift */; };
 		67291CEA21EFFC450079DA03 /* CompletionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE921EFFC450079DA03 /* CompletionBlock.swift */; };
+		67291CED21F002F60079DA03 /* PicturesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CEC21F002F60079DA03 /* PicturesManager.swift */; };
+		67291CF021F0037D0079DA03 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CEF21F0037D0079DA03 /* Picture.swift */; };
 		6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3521EF858F00D0856A /* UIView+Camera.swift */; };
 		6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3921EF86BA00D0856A /* StartView.swift */; };
 		6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3D21EF880900D0856A /* ARCameraView.swift */; };
@@ -41,6 +43,8 @@
 		67291CE421EFE1D80079DA03 /* PictureScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureScanView.swift; sourceTree = "<group>"; };
 		67291CE721EFFAFA0079DA03 /* LaserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserView.swift; sourceTree = "<group>"; };
 		67291CE921EFFC450079DA03 /* CompletionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionBlock.swift; sourceTree = "<group>"; };
+		67291CEC21F002F60079DA03 /* PicturesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesManager.swift; sourceTree = "<group>"; };
+		67291CEF21F0037D0079DA03 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		6735AD3521EF858F00D0856A /* UIView+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Camera.swift"; sourceTree = "<group>"; };
 		6735AD3921EF86BA00D0856A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		6735AD3D21EF880900D0856A /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,22 @@
 				67291CE721EFFAFA0079DA03 /* LaserView.swift */,
 			);
 			path = LaserView;
+			sourceTree = "<group>";
+		};
+		67291CEB21F002E30079DA03 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				67291CEC21F002F60079DA03 /* PicturesManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		67291CEE21F003420079DA03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67291CEF21F0037D0079DA03 /* Picture.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		6735AD3721EF867700D0856A /* Screens */ = {
@@ -220,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				675FB26121EF772A0034E438 /* App */,
+				67291CEB21F002E30079DA03 /* Utils */,
+				67291CEE21F003420079DA03 /* Model */,
 				6735AD3721EF867700D0856A /* Screens */,
 				675FB26521EF798E0034E438 /* UIComponents */,
 				675FB25E21EF766F0034E438 /* Extensions */,
@@ -367,8 +389,10 @@
 				675FB26021EF768C0034E438 /* UIView+RoundCorners.swift in Sources */,
 				67401D0321EFDC4400990DBE /* ScannerView.swift in Sources */,
 				6735AD4721EFC0F100D0856A /* PicturesCollectionView.swift in Sources */,
+				67291CF021F0037D0079DA03 /* Picture.swift in Sources */,
 				67401CFA21EFD3E500990DBE /* MockCameraView.swift in Sources */,
 				6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */,
+				67291CED21F002F60079DA03 /* PicturesManager.swift in Sources */,
 				67291CEA21EFFC450079DA03 /* CompletionBlock.swift in Sources */,
 				6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */,
 				67401CF621EFD0B700990DBE /* PicturesCollectionDelegate.swift in Sources */,

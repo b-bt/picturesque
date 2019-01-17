@@ -32,14 +32,19 @@ class ScannerView: UIViewController {
         self.messageLbl.text = "scanning your picture"
         
         LaserView.scan(view: self.view, completion: {
-            self.isScanning = false
-            self.messageLbl.text = "ready for next picture"
+//            self.isScanning = false
+//            self.messageLbl.text = "ready for next picture"
+//            self.secondaryBtn.setTitle("Done", for: .disabled)
+//            self.secondaryBtn.setTitle("Done", for: .normal)
+            
+            // Mock picture scanning
+            PicturesManager.scanNewPicture()
+            self.dismiss(animated: true, completion: nil)
         })
-        /*
-        place picture in view
-        ready for next picture
-        scanning your picture
-         */
+    }
+    
+    @IBAction func dimissView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

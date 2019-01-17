@@ -15,6 +15,12 @@ class PictureCell: UICollectionViewCell {
     
     @IBOutlet weak var imgView: UIImageView!
     
+    var picture: Picture? {
+        didSet {
+            self.imgView.image = picture?.image
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
