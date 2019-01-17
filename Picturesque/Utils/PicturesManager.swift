@@ -11,6 +11,7 @@ import UIKit
 class PicturesManager {
     private init() {
         self.scanNewPicture()
+        self.scanNewPicture()
     }
     static private(set) var shared: PicturesManager = PicturesManager()
     

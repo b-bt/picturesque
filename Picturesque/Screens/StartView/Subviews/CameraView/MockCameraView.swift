@@ -11,6 +11,7 @@ import UIKit
 class MockCameraView: UIView {
     
     private var pictureViews: [String:PictureView] = [:]
+    private var pictureCenterConstraints: [String : (x: NSLayoutConstraint, y: NSLayoutConstraint)] = [:]
     
     private func addBgImage() {
         guard let wallImage:UIImage = UIImage(named: "wall-image") else {
@@ -29,6 +30,38 @@ class MockCameraView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.setNeedsLayout()
     }
+    
+    private func addPanRecognizer(to view: PictureView) {
+        let centerXConstraint = NSLayoutConstraint(item: view, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let centerYConstraint = NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+        self.addConstraints([centerXConstraint, centerYConstraint])
+        self.pictureCenterConstraints[view.picture!.id] = (x: centerXConstraint, y: centerYConstraint)
+        self.setNeedsLayout()
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(dragView(_:)))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(panGesture)
+    }
+    
+    // MARK: Gesture Recognizers Responders:
+    @objc private func dragView(_ sender: UIPanGestureRecognizer) {
+        guard let view = sender.view as? PictureView,
+            let pictureId = view.picture?.id,
+            let (centerXConstraint, centerYConstraint) = self.pictureCenterConstraints[pictureId]
+        else { return }
+        
+        self.bringSubviewToFront(view)
+        
+        let translation = sender.translation(in: self)
+        let centerX = centerXConstraint.constant + translation.x
+        let centerY = centerYConstraint.constant + translation.y
+        centerXConstraint.constant = centerX
+        centerYConstraint.constant = centerY
+        self.setNeedsLayout()
+        sender.setTranslation(CGPoint.zero, in: self)
+    }
+    
+    
 
 }
 
@@ -41,10 +74,15 @@ extension MockCameraView: CameraViewProtocol {
     }
     
     func add(picture: Picture) {
-        let pictureView = PictureView(with: picture)
-        pictureView.center = self.center
+        let pictureView = PictureView(frame: CGRect(x: center.x, y: center.y, width: 100, height: 100))
+        pictureView.picture = picture
+        pictureView.translatesAutoresizingMaskIntoConstraints = false
+        
         self.pictureViews[picture.id] = pictureView
         self.addSubview(pictureView)
+        
+        // Add recognizers and their needed constraints:
+        self.addPanRecognizer(to: pictureView)
     }
     
     func remove(picture: Picture) {

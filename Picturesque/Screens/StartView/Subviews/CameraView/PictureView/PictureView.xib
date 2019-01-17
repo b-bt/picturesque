@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="119" height="160"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic-gravity" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-aY-Aak">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic-steven" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-aY-Aak">
                     <rect key="frame" x="0.0" y="0.0" width="119" height="160"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-move" translatesAutoresizingMaskIntoConstraints="NO" id="1nB-vF-6la">
@@ -61,6 +61,6 @@
     <resources>
         <image name="icon-close" width="102" height="102"/>
         <image name="icon-move" width="261" height="261"/>
-        <image name="pic-gravity" width="1309" height="1898"/>
+        <image name="pic-steven" width="439" height="679"/>
     </resources>
 </document>

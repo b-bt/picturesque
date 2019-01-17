@@ -18,10 +18,13 @@ class PictureView: UIView {
     @IBOutlet weak var moveIcon: UIImageView!
     @IBOutlet weak var closeBtn: UIButton!
     
-    private(set) var picture: Picture? {
+    var picture: Picture? {
         didSet {
             guard let pic = self.picture else { return }
             self.imageView.image = pic.image
+            
+            let ratio = pic.image.size.height / pic.image.size.width
+            self.set(height: 110, andRatio: ratio)
         }
     }
     
@@ -42,14 +45,11 @@ class PictureView: UIView {
         }
     }
     
-    init(with picture: Picture) {
+    /*init(with picture: Picture) {
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         self.commonInit()
         self.picture = picture
-        
-        let ratio = picture.image.size.height / picture.image.size.width
-        self.set(height: 110, andRatio: ratio)
-    }
+    }*/
     
     override init(frame: CGRect) {
         super.init(frame: frame)
