@@ -77,6 +77,14 @@ class PictureView: UIView {
         self.isSelected = true
     }
     
+    func scale(by scaleFactor: CGFloat) {
+//        if (scaleFactor < 0.6 || scaleFactor > 3) {
+//            return
+//        }
+        self.heightConstraint!.constant = self.heightConstraint!.constant * scaleFactor
+        self.setNeedsLayout()
+    }
+    
     func set(height: CGFloat, andRatio ratio: CGFloat) {
         if let ratioConstraint = self.aspectRatioConstraint, let heightConstraint = self.heightConstraint {
             NSLayoutConstraint.deactivate([ratioConstraint, heightConstraint])

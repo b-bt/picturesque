@@ -31,6 +31,17 @@ class MockCameraView: UIView {
         self.setNeedsLayout()
     }
     
+    private func select(view: PictureView?) {
+        for (_, pictureView) in self.pictureViews {
+            if pictureView == view {
+                pictureView.isSelected = true
+            } else {
+                pictureView.isSelected = false
+            }
+        }
+    }
+    
+    // MARK: Gesture Recognizers creation methods:
     private func addPanRecognizer(to view: PictureView) {
         let centerXConstraint = NSLayoutConstraint(item: view, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
         let centerYConstraint = NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
@@ -42,14 +53,9 @@ class MockCameraView: UIView {
         view.addGestureRecognizer(panGesture)
     }
     
-    private func select(view: PictureView?) {
-        for (_, pictureView) in self.pictureViews {
-            if pictureView == view {
-                pictureView.isSelected = true
-            } else {
-                pictureView.isSelected = false
-            }
-        }
+    private func addPinchRegognizer(to view: PictureView) {
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(pinchView(_:)))
+        view.addGestureRecognizer(pinchRecognizer)
     }
     
     // MARK: Gesture Recognizers Responders:
@@ -84,6 +90,12 @@ class MockCameraView: UIView {
         sender.setTranslation(CGPoint.zero, in: self)
     }
 
+    @objc private func pinchView(_ sender: UIPinchGestureRecognizer) {
+        guard let view = sender.view as? PictureView else { return }
+        print(sender.scale)
+        view.scale(by: sender.scale)
+        sender.scale = 1.0
+    }
 }
 
 extension MockCameraView: CameraViewProtocol {
@@ -112,6 +124,7 @@ extension MockCameraView: CameraViewProtocol {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapView(_:)))
         pictureView.addGestureRecognizer(tapGesture)
         self.addPanRecognizer(to: pictureView)
+        self.addPinchRegognizer(to: pictureView)
         
         self.select(view: pictureView)
     }
