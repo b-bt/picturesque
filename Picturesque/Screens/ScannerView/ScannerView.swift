@@ -14,8 +14,25 @@ class ScannerView: UIViewController {
     @IBOutlet weak var photoBtn: UIButton!
     @IBOutlet weak var secondaryBtn: LabelButton!
     
+    private var isScanning: Bool = false {
+        didSet {
+            self.photoBtn.isEnabled = !self.isScanning
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func scanPictureTapped(_ sender: Any) {
+        if isScanning {
+            return
+        }
+        self.isScanning = true
+        
+        LaserView.scan(view: self.view, completion: {
+            self.isScanning = false
+        })
     }
     
 }

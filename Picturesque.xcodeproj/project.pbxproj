@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		67291CE521EFE1D80079DA03 /* PictureScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE421EFE1D80079DA03 /* PictureScanView.swift */; };
+		67291CE821EFFAFA0079DA03 /* LaserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE721EFFAFA0079DA03 /* LaserView.swift */; };
+		67291CEA21EFFC450079DA03 /* CompletionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67291CE921EFFC450079DA03 /* CompletionBlock.swift */; };
 		6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3521EF858F00D0856A /* UIView+Camera.swift */; };
 		6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3921EF86BA00D0856A /* StartView.swift */; };
 		6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735AD3D21EF880900D0856A /* ARCameraView.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		67291CE421EFE1D80079DA03 /* PictureScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureScanView.swift; sourceTree = "<group>"; };
+		67291CE721EFFAFA0079DA03 /* LaserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserView.swift; sourceTree = "<group>"; };
+		67291CE921EFFC450079DA03 /* CompletionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionBlock.swift; sourceTree = "<group>"; };
 		6735AD3521EF858F00D0856A /* UIView+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Camera.swift"; sourceTree = "<group>"; };
 		6735AD3921EF86BA00D0856A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		6735AD3D21EF880900D0856A /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
@@ -89,9 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				67291CE221EFE1470079DA03 /* PictureScanView */,
+				67291CE621EFFAC50079DA03 /* LaserView */,
 				67401D0421EFDD9F00990DBE /* LabelButton */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		67291CE621EFFAC50079DA03 /* LaserView */ = {
+			isa = PBXGroup;
+			children = (
+				67291CE721EFFAFA0079DA03 /* LaserView.swift */,
+			);
+			path = LaserView;
 			sourceTree = "<group>";
 		};
 		6735AD3721EF867700D0856A /* Screens */ = {
@@ -242,6 +255,7 @@
 			children = (
 				675FB24F21EF71AA0034E438 /* Info.plist */,
 				675FB24021EF71A80034E438 /* AppDelegate.swift */,
+				67291CE921EFFC450079DA03 /* CompletionBlock.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				6735AD3621EF858F00D0856A /* UIView+Camera.swift in Sources */,
 				67401CF421EFCC3B00990DBE /* NewPictureCell.swift in Sources */,
 				6735AD4A21EFC30300D0856A /* PictureCell.swift in Sources */,
+				67291CE821EFFAFA0079DA03 /* LaserView.swift in Sources */,
 				67401D0621EFDDD000990DBE /* LabelButton.swift in Sources */,
 				67291CE521EFE1D80079DA03 /* PictureScanView.swift in Sources */,
 				6735AD4321EFA18A00D0856A /* MessageLabel.swift in Sources */,
@@ -354,6 +369,7 @@
 				6735AD4721EFC0F100D0856A /* PicturesCollectionView.swift in Sources */,
 				67401CFA21EFD3E500990DBE /* MockCameraView.swift in Sources */,
 				6735AD3A21EF86BA00D0856A /* StartView.swift in Sources */,
+				67291CEA21EFFC450079DA03 /* CompletionBlock.swift in Sources */,
 				6735AD3E21EF880900D0856A /* ARCameraView.swift in Sources */,
 				67401CF621EFD0B700990DBE /* PicturesCollectionDelegate.swift in Sources */,
 				67401CF821EFD37300990DBE /* CameraViewProtocol.swift in Sources */,
