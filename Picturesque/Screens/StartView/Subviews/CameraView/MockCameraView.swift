@@ -39,17 +39,40 @@ class MockCameraView: UIView {
         self.setNeedsLayout()
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(dragView(_:)))
-        view.isUserInteractionEnabled = true
         view.addGestureRecognizer(panGesture)
     }
     
+    private func select(view: PictureView?) {
+        for (_, pictureView) in self.pictureViews {
+            if pictureView == view {
+                pictureView.isSelected = true
+            } else {
+                pictureView.isSelected = false
+            }
+        }
+    }
+    
     // MARK: Gesture Recognizers Responders:
+    @objc private func mainViewTapped(_ sender: UITapGestureRecognizer) {
+        self.select(view: nil)
+    }
+    
+    @objc private func tapView(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view as? PictureView else { return }
+        if view.isSelected {
+            view.isSelected = false
+        } else {
+            self.select(view: view)
+        }
+    }
+    
     @objc private func dragView(_ sender: UIPanGestureRecognizer) {
         guard let view = sender.view as? PictureView,
             let pictureId = view.picture?.id,
             let (centerXConstraint, centerYConstraint) = self.pictureCenterConstraints[pictureId]
         else { return }
         
+        self.select(view: view)
         self.bringSubviewToFront(view)
         
         let translation = sender.translation(in: self)
@@ -60,8 +83,6 @@ class MockCameraView: UIView {
         self.setNeedsLayout()
         sender.setTranslation(CGPoint.zero, in: self)
     }
-    
-    
 
 }
 
@@ -71,6 +92,10 @@ extension MockCameraView: CameraViewProtocol {
         self.clipsToBounds = true
         
         self.addBgImage()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mainViewTapped(_:)))
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGesture)
     }
     
     func add(picture: Picture) {
@@ -82,7 +107,13 @@ extension MockCameraView: CameraViewProtocol {
         self.addSubview(pictureView)
         
         // Add recognizers and their needed constraints:
+        pictureView.isUserInteractionEnabled = true
+    
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapView(_:)))
+        pictureView.addGestureRecognizer(tapGesture)
         self.addPanRecognizer(to: pictureView)
+        
+        self.select(view: pictureView)
     }
     
     func remove(picture: Picture) {
