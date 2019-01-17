@@ -13,6 +13,8 @@ class PicturesManager {
     static private(set) var shared: PicturesManager = PicturesManager()
     
     private(set) var scannedPictures: [Picture] = []
+    // Mocked pictures data:
+    private var currentId: Int = 0
     private var pendingImages: [UIImage] =
         [
             UIImage(named: "pic-pink")!,
@@ -28,7 +30,8 @@ class PicturesManager {
             return
         }
         
-        let picture = Picture(withImage: image)
+        let picture = Picture(withImage: image, id: "picture\(currentId)")
+        self.currentId += 1
         self.scannedPictures.append(picture)
     }
     

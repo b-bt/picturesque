@@ -32,7 +32,11 @@ extension StartView: PicturesCollectionDelegate {
         self.performSegue(withIdentifier: "scanPictureSegue", sender: nil)
     }
     
-    func pictureSelected() {
+    func selected(picture: Picture) {
+        
+    }
+    
+    func deselected(picture: Picture) {
         
     }
 }

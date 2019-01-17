@@ -10,5 +10,6 @@ import Foundation
 
 protocol PicturesCollectionDelegate {
     func scanNewPicture()
-    func pictureSelected() // TODO: Add a picture argument
+    func selected(picture: Picture)
+    func deselected(picture: Picture)
 }

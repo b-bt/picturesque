@@ -11,8 +11,10 @@ import UIKit
 class Picture {
     
     private(set) var image: UIImage
+    let id: String
     
-    init(withImage image: UIImage) {
+    init(withImage image: UIImage, id: String) {
         self.image = image
+        self.id = id
     }
 }

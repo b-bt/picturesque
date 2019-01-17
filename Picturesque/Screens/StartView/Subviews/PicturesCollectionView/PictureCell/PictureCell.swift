@@ -20,6 +20,11 @@ class PictureCell: UICollectionViewCell {
             self.imgView.image = picture?.image
         }
     }
+    override var isSelected: Bool {
+        didSet {
+            self.alpha = isSelected ? 0.6 : 1.0
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
